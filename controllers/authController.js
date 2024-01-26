@@ -95,7 +95,9 @@ export const loginController = async(req,res) =>{
             message:"Login sucessful",
             user: {
                 name:user.name,
-                email:user.email
+                email:user.email,
+                phone:user.phone,
+                address:user.address
             },
             token
         })
@@ -111,3 +113,12 @@ export const loginController = async(req,res) =>{
     }
 
 };
+
+
+// test controller
+export const testController = (req,res) =>{
+  console.log("Protected Route");
+  res.status(200).send({
+    message:"Protected Route"
+  })
+}
